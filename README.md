@@ -1,16 +1,55 @@
-# pr_2
+# ПРАКТИЧЕСКАЯ РАБОТА №2.
 
-A new Flutter project.
+Цель работы: реализовать класс, который отвечает за базу данных, реализовать ф-ии init, onCreateTable, onUpdateTable, onInitTable, onDropeTable, реализовать таблицы для предметной области склад.
+Для наглядного примера разрабатываемой базы данных создадим модель Erwin
+ ![image](https://user-images.githubusercontent.com/78844121/207458965-055c218d-b2bf-47b3-a607-81b11b7e6862.png)
 
-## Getting Started
+Рисунок 1 - ERwin
+Для возможности работать с бд устанавливаем расширение SQLite и добавляем следующие библиотеки
+ ![image](https://user-images.githubusercontent.com/78844121/207458975-22837418-b614-423b-bf6f-9f6f62b6326f.png)
 
-This project is a starting point for a Flutter application.
+Рисунок 2 - Библиотеки
 
-A few resources to get you started if this is your first Flutter project:
+После следует создать модели таблиц бд
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+ ![image](https://user-images.githubusercontent.com/78844121/207458993-32f009c6-07c1-42e0-b088-eb2c211e7369.png)
+ 
+Рисунок 3 - Модели
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Пример кода в одной из моделей:
+
+ ![image](https://user-images.githubusercontent.com/78844121/207459062-42f6a360-8b25-4789-b0bc-99d0617e5cb4.png)
+
+Рисунок 4 - Пример модели
+
+Теперь для каждой модели нужно создать файл Entity. Пример содержимого:
+
+ ![image](https://user-images.githubusercontent.com/78844121/207459079-ca306803-256f-450f-8c9e-92cb9395ebd5.png)
+
+Рисунок 5 - Пример Entity
+
+После нужно создать файл, который будет отвечать за создание таблиц
+
+ ![image](https://user-images.githubusercontent.com/78844121/207459100-f7f6524b-49f1-4fc9-a08f-8b0a7460a2c9.png)
+
+Рисунок 6 - Создание таблиц
+
+Теперь нужно создаем файл для управления базой данных. Добавляем в него функцию создания и обновления таблиц, а так же обновления базы данных.
+
+ ![image](https://user-images.githubusercontent.com/78844121/207459119-794bacff-f900-4b02-bae2-a69d93ea12e3.png)
+
+Рисунок 7 - Манипуляции над базой данных
+
+В него же добавляем функцию добавления данных в таблицы при их создании.
+
+ ![image](https://user-images.githubusercontent.com/78844121/207459136-e02a994f-ee82-48fc-9b12-d7860f831023.png)
+
+Рисунок 8 - Добавление данных в таблицы
+
+После запускаем проект и прожимаем сочетание ctrl alt p, после чего вводим SQLite: Open Database. Выбираем нашу базу данных и можем открыть созданные и заполненные нами таблицы
+
+ ![image](https://user-images.githubusercontent.com/78844121/207459155-3f6a5b6a-7e37-4711-8aed-e74f691b17df.png)
+
+Рисунок 9 – Результат
+
+Вывод: В данной практической работе были выполнены поставленные задачи, что и отображает данный отчет.
